@@ -1,8 +1,3 @@
-DROP TABLE cattoys;
-DROP TABLE toys;
-DROP TABLE cats;
-
-
 CREATE TABLE cats
 (
   id SERIAL PRIMARY KEY,

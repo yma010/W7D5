@@ -1,3 +1,6 @@
+DROP TABLE cattoys;
+DROP TABLE toys;
+DROP TABLE cats;
 --
 -- PostgreSQL database dump
 --

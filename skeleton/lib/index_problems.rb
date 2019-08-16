@@ -71,6 +71,8 @@ def toy_time
   
   # REMINDER: Only one index is needed per problem! 
   # Get cost within the range of: 32..40
+  #CREATE_INDEX toy_name ON toys(name);
+  #Improved Limit  (cost=33.12..33.12 rows=1 width=4)
   execute(<<-SQL)
     EXPLAIN
       SELECT
@@ -89,6 +91,8 @@ def gold_cat_toys
   # Find the `toys` name for each `cat` that is 'Gold'.
   
   # Get cost within the range of: 95..600
+  #CREATE INDEX cats_color ON cats(color);
+  #Improved Nested Loop  (cost=96.51..538.34 rows=508 width=9)
   execute(<<-SQL)
     EXPLAIN
       SELECT
@@ -111,6 +115,8 @@ def who_owns_thumbs_up
   # What kind of scan would be more efficent and what index could you create that would help?
 
   # Get cost within the range of: 4..150
+  # CREATE INDEX cattoys_id ON cattoys(toy_id);
+  # Nested Loop  (cost=33.48..313.43 rows=1 width=12)
   execute(<<-SQL)
     EXPLAIN
       SELECT
@@ -131,6 +137,8 @@ def popular_toys
   # Add the index that will make this query much more efficient!
 
   # Get cost within the range of: 30..40
+  # CREATE INDEX cattoys_cat_id ON cattoys(cat_id)
+  # GroupAggregate  (cost=35.20..35.26 rows=1 width=17)
   execute(<<-SQL)
     EXPLAIN
       SELECT
