@@ -175,7 +175,6 @@ def no_apples_for_blair_sub
       )
     ORDER BY
       cats.name;
-
   SQL
 end
 
@@ -250,7 +249,6 @@ def price_like_shiny_mouse
       AND shiny.name = 'Shiny Mouse'
     ORDER BY
       not_shiny.name;
-
   SQL
 end
 
@@ -350,8 +348,6 @@ def toys_that_jet_owns
     cattoys AS jet_toy ON toys.id = jet_toy.toy_id
   JOIN
     cats AS is_jet ON is_jet.id = jet_toy.cat_id
-
-
   JOIN
     cattoys AS not_jet_toy ON toys.id = not_jet_toy.toy_id
   JOIN
@@ -400,6 +396,5 @@ def toys_that_jet_owns_sub
     )
   ORDER BY
     cats.name;
-
   SQL
 end
