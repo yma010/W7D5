@@ -158,7 +158,7 @@ def popular_toys
         COUNT(*) >= 2;
   SQL
 end
-#
+
 
 
 
