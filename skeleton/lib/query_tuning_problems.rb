@@ -284,7 +284,6 @@ def top_cat
     COUNT(toys.name) DESC
   LIMIT
     1;
-
   SQL
 end
 
